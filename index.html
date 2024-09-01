@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            time: '#C81D8F'
+          }
+        }
+      }
+    }
+  </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="grid grid-cols-2 h-[100vh]">
+        <div class="bg-[url('./img/mario.jpg')] bg-cover h-[100%]"></div>
+        <div class="bg-[url('./img/bg.jpg')] bg-cover flex flex-col justify-center items-center h-[100%] bg-black">
+            
+            <div class=" position-relative" style="width: 30rem; padding: 20px; margin-top: 30px;" id="game-card">
+                <img src="./img/bgimage.jpg" class="card-img-top hidden border" alt="img">
+        
+                <div class="my-3 fw-bold text-center text-white text-3xl" id="Opening">Click button to start game</div>
+
+                <div class="card-body d-flex flex-column justify-content-center align-items-center">
+        
+                    <div class="d-flex flex-column justify-content-around align-items-center flex-sm-row w-100 position-relative">
+                        <div id="answer" class="mt-5 mb-4 border-b border-green-600 text-capitalize fw-bold text-white h2 d-flex justify-content-center align-items-center d-none" style="height: 60px; width: 260px;"></div>
+                        <div class="fw-bold position-absolute top-0 start-50 translate-middle-x mx-auto" style="font-size: 30px; width: 80%;" id="response"></div>
+                        <button class="w-[100px] h-[100px] rounded-full bg-green-600 font-bold text-white mx-auto" id="startGame" style="margin-bottom: 50px;">
+                            START
+                        </button>
+                        
+                    </div>
+        
+        
+        
+                    <div id="keys" class="d-flex flex-wrap gap-2 justify-content-center" style="margin-top: 20px;">
+                        <!-- append keys -->
+        
+
+                            <button class="bg-red-600 text-white px-4 d-none" id="delete">
+                                Delete
+                            </button>
+                            <button class="bg-green-600 text-white px-4 d-none" id="checkAnswer">
+                                Submit
+                            </button>
+                    </div>
+                </div>
+                <div class="position-absolute top-[350px] left-[0] translate-middle px-5 text-green-500 text-[25px] fw-bold d-flex justify-content-center align-items-center d-none" id="countdown">60</div>
+            </div>
+            <button class="w-[100px] h-[100px] rounded-full bg-green-600 font-bold text-white mx-auto d-none" id="restartGame" style="width: 100px;">
+               Restart
+            </button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
