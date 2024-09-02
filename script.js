@@ -1,38 +1,39 @@
+// array of image
 const items = [
-    { // array of images and answer
+    { 
         id: 1,
         image: "./img/bird.jpg",
-        answer: 'bird'
+        word: 'bird'
     }, 
     {
         id: 2,
         image: "./img/cat.jpg",
-        answer: 'cat'
+        word: 'cat'
     }, 
     {
         id: 3,
         image: "./img/dog.jpg",
-        answer: 'dog'
+        word: 'dog'
     }, 
     {
         id: 4,
         image: "./img/monkey.jpg",
-        answer: 'monkey'
+        word: 'monkey'
     },
     {
         id: 5,
         image: "./img/fox.jpg",
-        answer: 'fox'
+        word: 'fox'
     },
     {
         id: 6,
         image: "./img/giraffe.jpeg",
-        answer: 'giraffe'
+        word: 'giraffe'
     },
     {
         id: 7,
         image: "./img/leopard.jpg",
-        answer: 'leopard'
+        word: 'leopard'
     },
 ]
 
@@ -149,7 +150,7 @@ function startGame() { // function to start game
         let inputedAnswer = document.getElementById('answer').innerText;
         let dataIndex = parseInt(gameImg.getAttribute('alt')) ;
         let responseMsg = document.getElementById('response')
-        if (inputedAnswer.toLocaleLowerCase() === data[dataIndex].answer) {
+        if (inputedAnswer.toLocaleLowerCase() === data[dataIndex].word) {
             score++
             responseMsg.innerHTML = `<p class="text-center">Good job</p>`
             responseMsg.classList.add('text-white')
